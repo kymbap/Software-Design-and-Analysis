@@ -26,6 +26,18 @@ public class A6B1 {
 
         scanner.close();
 
-        System.out.println(list);
+        System.out.println("List: " + list);
+
+        System.out.println("Greatest number in list is: " + greatestValue(list));
+    }
+
+    public static int greatestValue(ArrayList<Integer> list){
+        int greatest = list.get(0);
+        for (Integer i : list){
+            if (i > greatest){
+                greatest = i;
+            }
+        }
+        return greatest;
     }
 }
